@@ -11,6 +11,7 @@ import { HospitalCreateComponent } from './components/hospitals/hospital-create/
 import { HospitalDetailsComponent } from './components/hospitals/hospital-details/hospital-details.component';
 import { HospitalEditComponent } from './components/hospitals/hospital-edit/hospital-edit.component';
 import { HospitalDeleteComponent } from './components/hospitals/hospital-delete/hospital-delete.component';
+import { DoctorOverviewComponent } from './components/doctors/doctor-overview/doctor-overview.component';
 import { DoctorDetailsComponent } from './components/doctors/doctor-details/doctor-details.component';
 import { DoctorCreateComponent } from './components/doctors/doctor-create/doctor-create.component';
 import { DoctorEditComponent } from './components/doctors/doctor-edit/doctor-edit.component';
