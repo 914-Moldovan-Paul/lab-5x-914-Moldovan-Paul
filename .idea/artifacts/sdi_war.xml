@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sdi:war">
+    <output-path>$PROJECT_DIR$/backend/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>sdi</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="sdi-latest.war">
+      <element id="artifact" artifact-name="sdi:war exploded" />
+    </root>
+  </artifact>
+</component>
