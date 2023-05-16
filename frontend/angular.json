@@ -48,13 +48,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.doctorion.ts"
-                }
-              ]
+              "outputHashing": "all"
             },
             "local": {
               "buildOptimizer": false,
