@@ -1,0 +1,21 @@
+<div
+  class="h-12 px-6 bg-green-600 text-2xl text-white border-b-slate-400 border-b-2 flex justify-between items-center"
+>
+  <nav class="inline-flex gap-9 h-full align-middle items-center">
+    <a routerLink="">Home</a>
+    <a routerLink="users">Users</a>
+    <a [routerLink]="['hospitals']">Hospitals</a>
+    <a [routerLink]="['doctors']">Doctors</a>
+    <a [routerLink]="['doctors', 'sorted-by-rating']">Doctors by rating</a>
+    <a [routerLink]="['hospitals', 'sorted-by-doctors']"
+      >Hospitals by doctors</a
+    >
+    <a *ngIf="rol?.name == 'admin'" [routerLink]="['admin']">admin</a>
+  </nav>
+  <app-login-status class="w-96" />
+</div>
+<main class="h-full w-full absolute">
+  <div class="w-4/5 m-auto py-4">
+    <router-outlet></router-outlet>
+  </div>
+</main>
