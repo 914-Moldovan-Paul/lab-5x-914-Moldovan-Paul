@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="sdi:war exploded">
-    <output-path>$PROJECT_DIR$/backend/target/sdi-latest</output-path>
+    <output-path>$PROJECT_DIR$/backend/target/spring-boot-aws</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -96,7 +96,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/backend/target/sdi-latest/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/backend/target/spring-boot-aws/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="sdi/web/Web" />
     </root>

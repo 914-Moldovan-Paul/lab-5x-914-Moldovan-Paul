@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="sdi-latest.war">
+    <root id="archive" name="spring-boot-aws.war">
       <element id="artifact" artifact-name="sdi:war exploded" />
     </root>
   </artifact>
