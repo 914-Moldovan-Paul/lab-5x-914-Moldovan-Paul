@@ -62,7 +62,7 @@ public class AdminService implements IAdminService{
                     env.getRequiredProperty("spring.datasource.url"),
                     env.getRequiredProperty("spring.datasource.username"),
                     env.getRequiredProperty("spring.datasource.password"));
-            Scanner scanner = new Scanner(new BufferedReader(new FileReader(env.getRequiredProperty("sql_script.full_path"))));
+            Scanner scanner = new Scanner(new BufferedReader(new FileReader("generate-sql.sql")));
             scanner.useDelimiter(";");
 
             while(scanner.hasNext()) {
