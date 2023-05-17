@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Objects;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @Validated
 public class UserController {
 

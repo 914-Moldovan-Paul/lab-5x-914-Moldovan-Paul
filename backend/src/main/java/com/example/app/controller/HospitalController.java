@@ -23,7 +23,7 @@ import java.util.Objects;
 
 @RestController
 @Validated
-@CrossOrigin(origins = "*")
+@CrossOrigin
 public class HospitalController {
     @Autowired
     private IHospitalService hospitalService;

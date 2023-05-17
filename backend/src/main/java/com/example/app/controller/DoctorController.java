@@ -30,7 +30,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @Validated
 public class DoctorController {
     @Autowired

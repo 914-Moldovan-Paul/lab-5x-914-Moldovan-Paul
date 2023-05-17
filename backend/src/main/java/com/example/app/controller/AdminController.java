@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Objects;
 
 
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @Validated
 @RestController
 public class AdminController {

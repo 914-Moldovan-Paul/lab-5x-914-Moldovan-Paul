@@ -17,7 +17,7 @@ import java.util.Objects;
 
 @Validated
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin
 public class ReviewController {
     @Autowired
     IReviewService reviewService;
