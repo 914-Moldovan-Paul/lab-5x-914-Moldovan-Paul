@@ -10,6 +10,7 @@
     <a [routerLink]="['hospitals', 'sorted-by-doctors']"
       >Hospitals by doctors</a
     >
+    <a [routerLink]="['chat']">Chat room</a>
     <a *ngIf="rol?.name == 'admin'" [routerLink]="['admin']">admin</a>
   </nav>
   <app-login-status class="w-96" />
