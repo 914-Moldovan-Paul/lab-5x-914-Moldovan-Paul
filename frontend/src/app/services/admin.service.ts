@@ -17,6 +17,10 @@ export class AdminService {
     return this.http.post(environment.apiURL + '/admin/recreate', null);
   }
 
+  changeUserPreference(num : number): Observable<any> {
+    return this.http.post(environment.apiURL + `/admin/changeall/${num}`, null);
+  }
+
   changeRol(user_handle: String, rol: String): Observable<any> {
     return this.http.post(
       environment.apiURL +

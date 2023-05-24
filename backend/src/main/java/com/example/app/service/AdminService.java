@@ -13,10 +13,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 
 @Service
 public class AdminService implements IAdminService{
@@ -84,5 +81,29 @@ public class AdminService implements IAdminService{
         }
         userOptional.get().setRol(rol);
         userRepository.save(userOptional.get());
+    }
+
+    @Override
+    public void changeAll(Integer num) {
+        try {
+            Connection conn = DriverManager.getConnection(
+                    env.getRequiredProperty("spring.datasource.url"),
+                    env.getRequiredProperty("spring.datasource.username"),
+                    env.getRequiredProperty("spring.datasource.password"));
+            List<String> statementsStrings = Collections.singletonList(
+                    String.format("UPDATE user_preference SET page_size = %d WHERE 1", num)
+            );
+            statementsStrings.forEach(statementString -> {
+                try {
+                    Statement statement = conn.createStatement();
+                    statement.execute(statementString);
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -7,6 +7,8 @@ import { AdminService } from 'src/app/services/admin.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+  num: number = 1;
+
   constructor(
     private adminService: AdminService
   ) {}
@@ -22,4 +24,11 @@ export class AdminComponent {
       alert("Database has been recreated");
     }); 
   }
+
+  changeUserPreference(num : number) {
+    this.adminService.changeUserPreference(num).subscribe(() => {
+      alert("User preferences have been changed.");
+    }); 
+  }
+
 }

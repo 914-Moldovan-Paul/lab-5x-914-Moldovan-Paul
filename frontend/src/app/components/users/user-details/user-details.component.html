@@ -63,11 +63,7 @@
     <option value="7">7</option>
     <option value="10">10</option>
   </select>
-  <div
-    *ngIf="
-      !(rol?.update_all || (rol?.update_own && loggedInHandle == userHandle))
-    "
-  >
+  <div>
     Page size: {{ pageSize }}
   </div>
 

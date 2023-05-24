@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -62,6 +64,18 @@ public class AdminController {
         }
         try {
             adminService.changeRol(user_handle, rol);
+        } catch (AppException e) {
+            response.put("error", e.toString());
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @PostMapping("/admin/changeall/{num}")
+    public ResponseEntity<Map<String, String>> changeAll(@PathVariable("num") Integer num) {
+        Map<String, String> response = new HashMap<>();
+        try {
+            adminService.changeAll(num);
         } catch (AppException e) {
             response.put("error", e.toString());
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);

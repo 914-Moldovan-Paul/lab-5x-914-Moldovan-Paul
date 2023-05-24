@@ -62,6 +62,9 @@ export class UserDetailsComponent extends AbstractPageContainerComponent {
       this.userRol = result;
     });
     super.ngOnInit();
+    this.userPreferenceService.getPreference(this.userHandle).subscribe((result) => {
+      super.pageSize = result.page_size;
+    })
   }
 
   override pageUpdate(): void {

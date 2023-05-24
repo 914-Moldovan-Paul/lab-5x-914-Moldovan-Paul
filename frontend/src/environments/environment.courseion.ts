@@ -1,3 +1,3 @@
 export const environment = {
-  apiURL: 'https://hospitalorganizer.mooo.com',
+  apiURL: 'http://localhost:8080',
 };
